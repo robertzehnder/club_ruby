@@ -12,4 +12,19 @@ people_in_line = [
   { name: "Katie", age: 50 },
   { name: "Ben", age: 33 }
 ]
+people_in_club = []
+
+people_in_line.each do |person|
+  if person[:age] < 18
+    next
+  end
+
+  people_in_club.push(person)
+
+  if people_in_club.length === 8
+    break
+  end
+end
+
+puts people_in_club
 
