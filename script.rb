@@ -12,4 +12,20 @@ people_in_line = [
   { name: "Katie", age: 50 },
   { name: "Ben", age: 33 }
 ]
+#-----------------Rob's Code---------------------
+club = []
+index = 0
+loop do
+  if people_in_line[index][:age] < 18
+    index += 1;
+    next
+  elsif people_in_line[index][:age] >= 18 && club.length < 8
+      club << people_in_line[index]
+  else
+    break
+  end
+    index += 1;
+    break if index == people_in_line.length;
+end
 
+puts club
